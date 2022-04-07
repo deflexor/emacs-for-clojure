@@ -17,7 +17,10 @@
 (setq recentf-save-file (concat user-emacs-directory ".recentf"))
 (require 'recentf)
 (recentf-mode 1)
-(setq recentf-max-menu-items 40)
+(setq recentf-auto-cleanup 'never) ;; for tramp, disable before (recentf-mode 1)!
+(setq recentf-max-saved-items 50)
+(setq recentf-max-menu-items 50)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
 
 
 ;; ido-mode allows you to more easily navigate choices. For example,
@@ -57,6 +60,7 @@
 (setq smex-save-file (concat user-emacs-directory ".smex-items"))
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
+; (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
 ;; projectile everywhere!
 (projectile-global-mode)

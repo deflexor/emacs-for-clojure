@@ -72,8 +72,8 @@
     ;; edit html tags like sexps
     tagedit
 
-    ;; git integration
-    magit))
+    js2-mode web-mode xclip))
+;(defvar my-packages '(smex js2-mode web-mode xclip yasnippet company iedit)  "Default packages")
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
